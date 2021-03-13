@@ -1,6 +1,6 @@
 const userService = require('../service/userService');
 
-const { passwordHasher }= require('../helpers');
+const { passwordHasher } = require('../helpers');
 
 module.exports = {
     getAllUsers: async (req, res) => {
@@ -39,5 +39,15 @@ module.exports = {
         } catch (e) {
             res.json(e.message)
         }
-    }
+    },
+
+    deleteUser: (req, res) => {
+        try {
+            const { userId } = req.params;
+
+            res.json(`${userId} is deleted`);
+        } catch (e) {
+            res.json(e.message);
+        }
+    },
 };

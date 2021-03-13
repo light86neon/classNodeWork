@@ -5,3 +5,5 @@ const { authController } = require('../controller');
 router.post('/', authController.authUser );
 
 module.exports = router;
+
+
