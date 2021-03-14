@@ -1,3 +1,5 @@
 module.exports = {
-    CURRENT_YEAR : new Date().getFullYear()
+    CURRENT_YEAR : new Date().getFullYear(),
+    AUTHORIZATION: `Authorization`,
+    UNAUTHORIZED: 'Anauthorized'
 };

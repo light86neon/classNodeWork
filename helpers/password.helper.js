@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 
-const {errorMessageEnum} = require('../constants')
+const { errorMessageEnum } = require('../constants')
 
 module.exports = {
     hash: (password) => bcrypt.hash(password, 10),

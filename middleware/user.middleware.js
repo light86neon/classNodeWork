@@ -1,7 +1,6 @@
 const errorCodes = require('../constants/errorCodes.enum');
-const errorMessage = require('../constants/error.message')
 
-const {userValidators} = require('../validators');
+const { userValidators } = require('../validators');
 
 module.exports = {
     checkIsIdValid: (req, res, next) => {
@@ -11,6 +10,7 @@ module.exports = {
             res.status(errorCodes.BAD_REQUEST).json(e.message);
         }
     },
+
     isUserValid: (req, res, next) => {
         try {
           const { error } = userValidators.createUserValidator.validate(req.body);
@@ -18,6 +18,7 @@ module.exports = {
           if(error) {
               throw new Error(error.details[0].message);
           }
+
             next();
         } catch (e) {
             res.status(errorCodes.BAD_REQUEST).json(e.message);

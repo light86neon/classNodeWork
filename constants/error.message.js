@@ -14,5 +14,25 @@ module.exports = {
     NO_USER: {
         en: 'No User',
         ua: 'Немає користувача'
+    },
+    TOKEN_IS_REQUIRED: {
+        en: 'Token is required',
+        ua: 'Потрібний токен'
+    },
+    TOKEN_IS_NOT_VALID: {
+        en: 'Token is not valid',
+        ua: 'Токен не дійсний'
+    },
+    USER_IS_DELETED: {
+        en: 'User was deleted',
+        ua: 'Користувача видалено'
+    },
+    USER_NOT_DETECTED: {
+        en: 'User not detected',
+        ua: 'Користувача не знайдено'
+    },
+    USER_CREATED: {
+        en: 'User is created',
+        ua: 'Створено нового користувача'
     }
 };

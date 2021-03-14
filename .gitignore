@@ -4,3 +4,4 @@
 /node_modules
 /bcrypt.hash(password
 /.gitignore
+/.env

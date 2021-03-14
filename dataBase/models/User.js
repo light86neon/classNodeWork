@@ -8,12 +8,12 @@ const { Schema, model } = require('mongoose');
 const { dataBaseTablesEnum: { USER } } = require('../../constants');
 
 const userScheme = new Schema({
-    name: {type: String, required: true},
-    email: {type: String, required: true},
-    password: {type: String, required: true},
-    cars: [{type: Schema.Types.ObjectId}]
+    name: { type: String, required: true },
+    email: { type: String, required: true },
+    password: { type: String, required: true },
+    cars: [{ type: Schema.Types.ObjectId }]
 
-}, { timestamps: true, toObject: {virtuals: true}, toJSON: {virtuals: true}});
+}, { timestamps: true, toObject: { virtuals: true }, toJSON: { virtuals: true }});
 
 userScheme.virtual('full_name').get(function() {
     const lastName = 'Fujitsu';
@@ -27,7 +27,7 @@ userScheme.virtual('userProducts', {
 });
 
 userScheme
-    .pre('find', function() {
+    .pre('findOne', function() {
         console.log('PRE FIND HOOK');
         this.populate('userCars');
     });
